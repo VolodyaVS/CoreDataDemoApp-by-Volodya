@@ -2,7 +2,7 @@
 //  NewTaskViewController.swift
 //  CoreDataDemoApp
 //
-//  Created by Alexey Efimov on 30.09.2020.
+//  Created by Vladimir Stepanchikov on 03.10.2020.
 //
 
 import UIKit
