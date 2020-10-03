@@ -60,12 +60,11 @@ class TaskListViewController: UITableViewController {
     }
     
     @objc private func addTask() {
-        showAlert(with: "New Task", and: "What do you want to do?", taskText: "")
+        showAlert(with: "New Task", and: "What do you want to do?")
     }
     
-    private func showAlert(with title: String, and message: String, taskText: String) {
+    private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.textFields?.first?.text = taskText
         
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
             guard let task = alert.textFields?.first?.text, !task.isEmpty else { return }
@@ -114,8 +113,7 @@ extension TaskListViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task = tasks[indexPath.row].name
-        showAlert(with: "Edit Task", and: "What do you want to do?", taskText: "\(String(describing: task))")
+        showAlert(with: "Edit Task", and: "What do you want to do?")
     }
     
 }
